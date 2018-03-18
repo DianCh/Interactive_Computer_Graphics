@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1303</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenGLDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="MyGL" name="mygl">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>618</width>
+      <height>432</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>131</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Vertex</string>
+    </property>
+    <widget class="QListWidget" name="vertexList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>211</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>131</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Half-edge</string>
+    </property>
+    <widget class="QListWidget" name="halfedgeList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>211</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>10</y>
+      <width>131</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Face</string>
+    </property>
+    <widget class="QListWidget" name="faceList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>211</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="addVertex">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>270</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add a vertex</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>330</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Edit vertex position</string>
+    </property>
+    <widget class="QDoubleSpinBox" name="changeX">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="changeZ">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>x:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>y:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>z:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="changeY">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="triangulate">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>270</y>
+      <width>181</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Triangulate selected face</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>330</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Edit face color</string>
+    </property>
+    <widget class="QDoubleSpinBox" name="changeR">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="changeG">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="changeB">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>68</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>R:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>G:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>B:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="divideMesh">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>270</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Divide mesh</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>330</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Manipulate face</string>
+    </property>
+    <widget class="QPushButton" name="extrude">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Extrude</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="centralDivide">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Central divide</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="distance">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>71</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>d:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="loadOBJ">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>300</y>
+      <width>111</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load OBJ</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>10</y>
+      <width>221</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Joint</string>
+    </property>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>201</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="loadJSON">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>300</y>
+      <width>111</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load JSON</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>270</y>
+      <width>241</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Translate</string>
+    </property>
+    <widget class="QPushButton" name="transX">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>along X</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="transY">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>along Y</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="transZ">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>along Z</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>translate units:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="translateDistance">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>91</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_9">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>360</y>
+      <width>241</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Rotate</string>
+    </property>
+    <widget class="QPushButton" name="rotX">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>around X</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="rotY">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>around Y</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="rotZ">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>around Z</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>rotate degrees:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="rotateAngle">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>91</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="bindSkeleton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>300</y>
+      <width>171</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bind skeleton and Skin</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1303</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionCamera_Controls"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCamera_Controls">
+   <property name="text">
+    <string>Camera Controls</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header>mygl.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

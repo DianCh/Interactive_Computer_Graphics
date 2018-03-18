@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>glsl/lambert.frag.glsl</file>
+        <file>glsl/lambert.vert.glsl</file>
+        <file>glsl/flat.frag.glsl</file>
+        <file>glsl/flat.vert.glsl</file>
+        <file>glsl/overlay.frag.glsl</file>
+        <file>glsl/overlay.vert.glsl</file>
+        <file>glsl/itemFrame.frag.glsl</file>
+        <file>glsl/itemFrame.vert.glsl</file>
+        <file>glsl/itemCube.frag.glsl</file>
+        <file>glsl/itemCube.vert.glsl</file>
+        <file>glsl/fullscreen.frag.glsl</file>
+        <file>glsl/fullscreen.vert.glsl</file>
+    </qresource>
+</RCC>
