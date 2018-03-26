@@ -29,22 +29,22 @@ and many other features.
 ### 4. OpenGL Fun
 Here we are getting into OpenGL shaders. This mainly walks through the pipeline of creating shader programs at CPU side and manipulating vertex shaders and fragment shaders at GPU side. Some fun transformations are ahieved.
 
-![alt text](https://github.com/DianCh/Learning_in_Robotics/blob/master/4_Indoor_SLAM/results/train_0.png "SLAM")
+![alt text](https://github.com/DianCh/Interactive_Computer_Graphics/blob/master/4_OpenGL_Fun/demo.png "fun")
 
 ### 5. OpenGL Even More Fun
 Here we continue to play with OpenGL shaders. This time we retrieve what's rendered in the render buffer and use that as another texture to perform a second post-processing. In this way some even more fun effects can be achieved such as worley bubbles, worley mosaic and TV glitch.
 
-![alt text](https://github.com/DianCh/Learning_in_Robotics/blob/master/4_Indoor_SLAM/results/train_0.png "SLAM")
+![alt text](https://github.com/DianCh/Interactive_Computer_Graphics/blob/master/5_OpenGL_Even_More_Fun/demo1.png "fun1")
+
+![alt text](https://github.com/DianCh/Interactive_Computer_Graphics/blob/master/5_OpenGL_Even_More_Fun/demo2.png "fun2")
 
 ### 6. Half Edge Mesh
 This is a three-week project in which I've incrementally added functions to the application. Half edge mesh data structure is utilized intensively and I managed to efficiently traverse the entire mesh using QMap and some clever tricks.
 
-![alt text](https://github.com/DianCh/Learning_in_Robotics/blob/master/4_Indoor_SLAM/results/train_0.png "SLAM")
+![alt text](https://github.com/DianCh/Interactive_Computer_Graphics/blob/master/6_Half_Edge_Mesh/demo.png "mesh")
 
 ### 7. Mini-Minecraft
 This is a teamwork by 3 people in three weeks. No more talks! Try it!
-
-![alt text](https://github.com/DianCh/Learning_in_Robotics/blob/master/4_Indoor_SLAM/results/train_0.png "SLAM")
 
 
 -------------------------
